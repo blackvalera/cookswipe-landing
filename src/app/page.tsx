@@ -54,7 +54,7 @@ export default function Home() {
       {/* ── Header ── */}
       <header className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6">
         <span className="text-2xl tracking-widest md:text-3xl">
-          <span className="text-[#00ff9d]">COOK</span>
+          <span className="text-[#ff6600]">COOK</span>
           <span className="text-white">SWIPE</span>
         </span>
 
@@ -63,7 +63,7 @@ export default function Home() {
             href="https://x.com/CookSwipe_fun"
             target="_blank"
             rel="noopener noreferrer"
-            className="border-4 border-white px-4 py-2 text-sm text-white shadow-[4px_4px_0px_0px_#00ff9d] transition-transform active:translate-x-[4px] active:translate-y-[4px] active:shadow-none md:text-base"
+            className="border-4 border-white px-4 py-2 text-sm text-white shadow-[4px_4px_0px_0px_#ff6600] transition-transform active:translate-x-[4px] active:translate-y-[4px] active:shadow-none md:text-base"
           >
             FOLLOW X
           </a>
@@ -71,7 +71,7 @@ export default function Home() {
             href="https://t.me/Cookswipe_chef"
             target="_blank"
             rel="noopener noreferrer"
-            className="border-4 border-white px-4 py-2 text-sm text-white shadow-[4px_4px_0px_0px_#00ff9d] transition-transform active:translate-x-[4px] active:translate-y-[4px] active:shadow-none md:text-base"
+            className="border-4 border-white px-4 py-2 text-sm text-white shadow-[4px_4px_0px_0px_#ff6600] transition-transform active:translate-x-[4px] active:translate-y-[4px] active:shadow-none md:text-base"
           >
             JOIN TG
           </a>
@@ -82,17 +82,17 @@ export default function Home() {
       <div className="mx-auto max-w-7xl px-6">
         <button
           onClick={handleCopy}
-          className="group flex w-full items-center justify-between border-4 border-[#00ff9d] bg-[#0a0a0a] px-4 py-3 text-left transition-transform active:translate-x-[2px] active:translate-y-[2px]"
+          className="group flex w-full items-center justify-between border-4 border-[#ff6600] bg-[#0a0a0a] px-4 py-3 text-left transition-transform active:translate-x-[2px] active:translate-y-[2px]"
         >
           <div className="min-w-0 flex-1">
-            <span className="block text-xs text-[#00ff9d] md:text-sm">
+            <span className="block text-xs text-[#ff6600] md:text-sm">
               &gt; CONTRACT ADDRESS_
             </span>
             <span className="block truncate text-sm text-white md:text-lg">
               {CA}
             </span>
           </div>
-          <span className="ml-4 shrink-0 border-4 border-white px-3 py-1 text-xs text-white shadow-[4px_4px_0px_0px_#00ff9d] transition-all group-active:translate-x-[4px] group-active:translate-y-[4px] group-active:shadow-none md:text-sm">
+          <span className="ml-4 shrink-0 border-4 border-white px-3 py-1 text-xs text-white shadow-[4px_4px_0px_0px_#ff6600] transition-all group-active:translate-x-[4px] group-active:translate-y-[4px] group-active:shadow-none md:text-sm">
             {copied ? "COPIED!" : "COPY"}
           </span>
         </button>
@@ -103,19 +103,19 @@ export default function Home() {
         {/* Left column — Copy & CTA */}
         <div className="flex flex-col items-center text-center lg:w-1/2 lg:items-start lg:text-left">
           {/* Badge */}
-          <div className="mb-8 inline-flex items-center border-4 border-[#00ff9d] px-4 py-2 text-sm text-[#00ff9d] md:text-base">
+          <div className="mb-8 inline-flex items-center border-4 border-[#ff6600] px-4 py-2 text-sm text-[#ff6600] md:text-base">
             <span>&gt; SYSTEM_ONLINE_</span>
-            <span className="ml-1 inline-block h-5 w-3 animate-pulse bg-[#00ff9d]" />
+            <span className="ml-1 inline-block h-5 w-3 animate-pulse bg-[#ff6600]" />
           </div>
 
           {/* Headline */}
           <h1
             className="text-5xl leading-[0.85] tracking-wider md:text-6xl lg:text-7xl"
-            style={{ textShadow: "4px 4px 0px #00ff9d" }}
+            style={{ textShadow: "4px 4px 0px #ff6600" }}
           >
             TINDER FOR
             <br />
-            <span className="text-[#00ff9d]">SOLANA.</span>
+            <span className="text-[#ff6600]">SOLANA.</span>
           </h1>
 
           {/* Subheadline */}
@@ -129,7 +129,7 @@ export default function Home() {
               href={PUMP_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block animate-pulse border-4 border-[#00ff9d] bg-[#00ff9d] px-6 py-4 text-lg font-bold text-black shadow-[8px_8px_0px_0px_#fff] hover:animate-none hover:bg-white active:translate-x-[6px] active:translate-y-[6px] active:shadow-none md:text-xl"
+              className="inline-block animate-pulse border-4 border-[#ff6600] bg-[#ff6600] px-6 py-4 text-lg font-bold text-black shadow-[8px_8px_0px_0px_#fff] hover:animate-none hover:bg-white active:translate-x-[6px] active:translate-y-[6px] active:shadow-none md:text-xl"
             >
               BUY ON PUMP.FUN
             </a>
@@ -137,13 +137,13 @@ export default function Home() {
               href="https://zealy.io/cw/cookswipe/questboard"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block border-4 border-white bg-transparent px-6 py-4 text-lg font-bold text-white shadow-[8px_8px_0px_0px_#00ff9d] active:translate-x-[6px] active:translate-y-[6px] active:shadow-none md:text-xl"
+              className="inline-block border-4 border-white bg-transparent px-6 py-4 text-lg font-bold text-white shadow-[8px_8px_0px_0px_#ff6600] active:translate-x-[6px] active:translate-y-[6px] active:shadow-none md:text-xl"
             >
               JOIN THE AIRDROP
             </a>
             <button
               onClick={() => setIsModalOpen(true)}
-              className="inline-block border-4 border-white bg-transparent px-6 py-4 text-lg font-bold text-white shadow-[8px_8px_0px_0px_#00ff9d] active:translate-x-[6px] active:translate-y-[6px] active:shadow-none md:text-xl"
+              className="inline-block border-4 border-white bg-transparent px-6 py-4 text-lg font-bold text-white shadow-[8px_8px_0px_0px_#ff6600] active:translate-x-[6px] active:translate-y-[6px] active:shadow-none md:text-xl"
             >
               READ MANIFESTO
             </button>
@@ -152,7 +152,7 @@ export default function Home() {
 
         {/* Right column — GameBoy frame */}
         <div className="flex items-center justify-center lg:w-1/2">
-          <div className="w-[240px] border-4 border-white bg-[#1a1a1a] p-4 shadow-[8px_8px_0px_0px_#00ff9d] md:w-[270px]">
+          <div className="w-[240px] border-4 border-white bg-[#1a1a1a] p-4 shadow-[8px_8px_0px_0px_#ff6600] md:w-[270px]">
             {/* Screen label */}
             <div className="mb-2 flex items-center justify-between text-xs">
               <span className="tracking-widest text-[#ff00ff]">COOKSWIPE</span>
@@ -192,7 +192,7 @@ export default function Home() {
               {/* Action buttons */}
               <div className="flex gap-3">
                 <div className="h-5 w-5 border-2 border-[#ff00ff] bg-[#ff00ff]/20" />
-                <div className="h-5 w-5 border-2 border-[#00ff9d] bg-[#00ff9d]/20" />
+                <div className="h-5 w-5 border-2 border-[#ff6600] bg-[#ff6600]/20" />
               </div>
             </div>
           </div>
@@ -201,18 +201,18 @@ export default function Home() {
 
       {/* ── System Modules Section ── */}
       <section className="mx-auto max-w-7xl px-6 py-12">
-        <div className="mb-8 inline-flex items-center border-4 border-[#00ff9d] px-4 py-2 text-sm text-[#00ff9d] md:text-base">
+        <div className="mb-8 inline-flex items-center border-4 border-[#ff6600] px-4 py-2 text-sm text-[#ff6600] md:text-base">
           <span>&gt; SYSTEM_MODULES_</span>
-          <span className="ml-1 inline-block h-5 w-3 animate-pulse bg-[#00ff9d]" />
+          <span className="ml-1 inline-block h-5 w-3 animate-pulse bg-[#ff6600]" />
         </div>
 
         <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
           {MODULES.map((mod) => (
             <div
               key={mod.title}
-              className="border-4 border-white bg-[#0a0a0a] p-6 shadow-[8px_8px_0px_0px_#00ff9d]"
+              className="border-4 border-white bg-[#0a0a0a] p-6 shadow-[8px_8px_0px_0px_#ff6600]"
             >
-              <h3 className="mb-3 text-xl text-[#00ff9d] md:text-2xl">
+              <h3 className="mb-3 text-xl text-[#ff6600] md:text-2xl">
                 {mod.title}
               </h3>
               <p className="text-base leading-relaxed text-gray-300 md:text-lg">
@@ -227,12 +227,12 @@ export default function Home() {
       <section className="mx-auto max-w-7xl px-6 py-12">
         <h2
           className="mb-6 text-center text-3xl tracking-wider md:text-4xl"
-          style={{ textShadow: "3px 3px 0px #00ff9d" }}
+          style={{ textShadow: "3px 3px 0px #ff6600" }}
         >
           LIVE CHART
         </h2>
-        <div className="border-4 border-white bg-[#0a0a0a] shadow-[8px_8px_0px_0px_#00ff9d]">
-          <div className="border-b-4 border-[#00ff9d] px-4 py-2 text-xs text-[#00ff9d] md:text-sm">
+        <div className="border-4 border-white bg-[#0a0a0a] shadow-[8px_8px_0px_0px_#ff6600]">
+          <div className="border-b-4 border-[#ff6600] px-4 py-2 text-xs text-[#ff6600] md:text-sm">
             &gt; DEXSCREENER_FEED_
           </div>
           <div className="relative w-full" style={{ paddingBottom: "60%" }}>
@@ -249,13 +249,13 @@ export default function Home() {
 
       {/* ── Token Data Section ── */}
       <section className="mx-auto max-w-7xl px-6 py-12">
-        <div className="mb-8 inline-flex items-center border-4 border-[#00ff9d] px-4 py-2 text-sm text-[#00ff9d] md:text-base">
+        <div className="mb-8 inline-flex items-center border-4 border-[#ff6600] px-4 py-2 text-sm text-[#ff6600] md:text-base">
           <span>&gt; TOKEN_DATA_</span>
-          <span className="ml-1 inline-block h-5 w-3 animate-pulse bg-[#00ff9d]" />
+          <span className="ml-1 inline-block h-5 w-3 animate-pulse bg-[#ff6600]" />
         </div>
 
-        <div className="border-4 border-white bg-[#0a0a0a] shadow-[8px_8px_0px_0px_#00ff9d]">
-          <div className="border-b-4 border-[#00ff9d] px-4 py-2 text-xs text-[#00ff9d] md:text-sm">
+        <div className="border-4 border-white bg-[#0a0a0a] shadow-[8px_8px_0px_0px_#ff6600]">
+          <div className="border-b-4 border-[#ff6600] px-4 py-2 text-xs text-[#ff6600] md:text-sm">
             &gt; TOKENOMICS_
           </div>
           {TOKENOMICS.map((row, i) => (
@@ -265,7 +265,7 @@ export default function Home() {
                 i < TOKENOMICS.length - 1 ? "border-b border-[#222]" : ""
               }`}
             >
-              <span className="text-sm text-[#00ff9d] md:text-lg">
+              <span className="text-sm text-[#ff6600] md:text-lg">
                 {row.label}
               </span>
               <span className="text-base text-white md:text-xl">
@@ -278,11 +278,11 @@ export default function Home() {
 
       {/* ── Footer ── */}
       <footer className="py-8 text-center">
-        <p className="animate-pulse text-xs tracking-wider text-[#00ff9d] md:text-sm">
+        <p className="animate-pulse text-xs tracking-wider text-[#ff6600] md:text-sm">
           INSERT COIN TO CONTINUE... BUILT IN SWITZERLAND
         </p>
 
-        <div className="mt-4 flex flex-wrap items-center justify-center gap-3 text-sm text-[#00ff9d] md:text-base">
+        <div className="mt-4 flex flex-wrap items-center justify-center gap-3 text-sm text-[#ff6600] md:text-base">
           <a
             href={DEXSCREENER_URL}
             target="_blank"
@@ -333,17 +333,17 @@ export default function Home() {
           onClick={() => setIsModalOpen(false)}
         >
           <div
-            className="w-full max-w-2xl max-h-[85vh] overflow-y-auto border-4 border-[#00ff9d] bg-[#050505] shadow-[8px_8px_0px_0px_#00ff9d]"
+            className="w-full max-w-2xl max-h-[85vh] overflow-y-auto border-4 border-[#ff6600] bg-[#050505] shadow-[8px_8px_0px_0px_#ff6600]"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Title bar */}
-            <div className="flex items-center justify-between border-b-4 border-[#00ff9d] px-6 py-3">
-              <span className="text-sm text-[#00ff9d] md:text-base">
+            <div className="flex items-center justify-between border-b-4 border-[#ff6600] px-6 py-3">
+              <span className="text-sm text-[#ff6600] md:text-base">
                 &gt;_ SYSTEM_LOG: FOUNDERS_MANIFESTO.txt
               </span>
               <button
                 onClick={() => setIsModalOpen(false)}
-                className="text-sm text-[#00ff9d] transition-colors hover:text-white md:text-base"
+                className="text-sm text-[#ff6600] transition-colors hover:text-white md:text-base"
               >
                 [ X ]
               </button>
@@ -377,7 +377,7 @@ export default function Home() {
                 build the best auto-trading bot for the Pump.fun Hackathon and
                 beyond.
               </p>
-              <p className="text-[#00ff9d]">
+              <p className="text-[#ff6600]">
                 Welcome to the family. Let&apos;s cook.
               </p>
             </div>
