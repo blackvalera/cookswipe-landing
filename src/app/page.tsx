@@ -38,6 +38,7 @@ const TOKENOMICS = [
 
 export default function Home() {
   const [copied, setCopied] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleCopy = async () => {
     await navigator.clipboard.writeText(CA);
@@ -140,14 +141,12 @@ export default function Home() {
             >
               JOIN THE AIRDROP
             </a>
-            <a
-              href="#"
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              onClick={() => setIsModalOpen(true)}
               className="inline-block border-4 border-white bg-transparent px-6 py-4 text-lg font-bold text-white shadow-[8px_8px_0px_0px_#00ff9d] active:translate-x-[6px] active:translate-y-[6px] active:shadow-none md:text-xl"
             >
-              READ DOCS
-            </a>
+              READ MANIFESTO
+            </button>
           </div>
         </div>
 
@@ -326,6 +325,65 @@ export default function Home() {
           advice.
         </p>
       </footer>
+
+      {/* ── Manifesto Modal ── */}
+      {isModalOpen && (
+        <div
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 backdrop-blur-sm p-4"
+          onClick={() => setIsModalOpen(false)}
+        >
+          <div
+            className="w-full max-w-2xl max-h-[85vh] overflow-y-auto border-4 border-[#00ff9d] bg-[#050505] shadow-[8px_8px_0px_0px_#00ff9d]"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Title bar */}
+            <div className="flex items-center justify-between border-b-4 border-[#00ff9d] px-6 py-3">
+              <span className="text-sm text-[#00ff9d] md:text-base">
+                &gt;_ SYSTEM_LOG: FOUNDERS_MANIFESTO.txt
+              </span>
+              <button
+                onClick={() => setIsModalOpen(false)}
+                className="text-sm text-[#00ff9d] transition-colors hover:text-white md:text-base"
+              >
+                [ X ]
+              </button>
+            </div>
+
+            {/* Body */}
+            <div className="space-y-4 px-6 py-6 text-base leading-relaxed text-gray-300 md:text-lg">
+              <p>
+                Most Web3 trading tools are built by faceless corporations or
+                anonymous devs looking for a quick flip. We are different.
+              </p>
+              <p>
+                We are a husband and wife dev duo hacking away from our home
+                office in Switzerland. We got tired of getting rekt by clunky DEX
+                UIs, missing perfect entries, and holding the bag while MEV bots
+                and whales dumped on us.
+              </p>
+              <p>
+                So we decided to build the tools we actually wanted to use, to
+                level the playing field for the trenches.
+              </p>
+              <p>
+                CookSwipe combines the addictive, frictionless swipe mechanics of
+                dating apps with a ruthless, automated AI trading terminal. You
+                swipe. OpenClaw AI does the heavy lifting — autonomously sniping
+                entries and securing profits based on your parameters while you
+                sleep.
+              </p>
+              <p>
+                No massive VC funding. Just pure code, coffee, and a mission to
+                build the best auto-trading bot for the Pump.fun Hackathon and
+                beyond.
+              </p>
+              <p className="text-[#00ff9d]">
+                Welcome to the family. Let&apos;s cook.
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
