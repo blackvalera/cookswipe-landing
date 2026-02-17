@@ -12,6 +12,29 @@ const pixelFont = VT323({
 const CA = "59RuALQmRumQn1kbS8PKB5m5Ek2pCVJakLKPXH7Spump";
 const PUMP_URL = `https://pump.fun/coin/${CA}`;
 const DEXSCREENER_EMBED = `https://dexscreener.com/solana/${CA}?embed=1&theme=dark`;
+const DEXSCREENER_URL = `https://dexscreener.com/solana/${CA}`;
+
+const MODULES = [
+  {
+    title: "SWIPE TO TRADE",
+    text: "Tinder-style interface for Solana tokens. Swipe right to ape in, swipe left to pass. Frictionless degenerate trading.",
+  },
+  {
+    title: "OPENCLAW AI",
+    text: "Never hold the bag again. Set your risk parameters and let OpenClaw AI automatically execute your exits based on momentum.",
+  },
+  {
+    title: "ZERO FEES",
+    text: "Launch tokens or trade with absolutely 0% platform fees. Built for maximum efficiency.",
+  },
+];
+
+const TOKENOMICS = [
+  { label: "TOTAL SUPPLY", value: "1,000,000,000 $COOK" },
+  { label: "TAXES", value: "0% BUY / 0% SELL" },
+  { label: "LIQUIDITY", value: "BURNED ON PUMP.FUN" },
+  { label: "MINT & FREEZE", value: "REVOKED" },
+];
 
 export default function Home() {
   const [copied, setCopied] = useState(false);
@@ -34,14 +57,24 @@ export default function Home() {
           <span className="text-white">SWIPE</span>
         </span>
 
-        <a
-          href="https://x.com/CookSwipe_fun"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="border-4 border-white px-4 py-2 text-sm text-white shadow-[4px_4px_0px_0px_#00ff9d] transition-transform active:translate-x-[4px] active:translate-y-[4px] active:shadow-none md:text-base"
-        >
-          FOLLOW X
-        </a>
+        <div className="flex gap-3">
+          <a
+            href="https://x.com/CookSwipe_fun"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="border-4 border-white px-4 py-2 text-sm text-white shadow-[4px_4px_0px_0px_#00ff9d] transition-transform active:translate-x-[4px] active:translate-y-[4px] active:shadow-none md:text-base"
+          >
+            FOLLOW X
+          </a>
+          <a
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="border-4 border-white px-4 py-2 text-sm text-white shadow-[4px_4px_0px_0px_#00ff9d] transition-transform active:translate-x-[4px] active:translate-y-[4px] active:shadow-none md:text-base"
+          >
+            JOIN TG
+          </a>
+        </div>
       </header>
 
       {/* ── Contract Address Bar ── */}
@@ -90,7 +123,7 @@ export default function Home() {
           </p>
 
           {/* CTA Buttons */}
-          <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+          <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
             <a
               href={PUMP_URL}
               target="_blank"
@@ -106,6 +139,14 @@ export default function Home() {
               className="inline-block border-4 border-white bg-transparent px-6 py-4 text-lg font-bold text-white shadow-[8px_8px_0px_0px_#00ff9d] active:translate-x-[6px] active:translate-y-[6px] active:shadow-none md:text-xl"
             >
               JOIN THE AIRDROP
+            </a>
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block border-4 border-white bg-transparent px-6 py-4 text-lg font-bold text-white shadow-[8px_8px_0px_0px_#00ff9d] active:translate-x-[6px] active:translate-y-[6px] active:shadow-none md:text-xl"
+            >
+              READ DOCS
             </a>
           </div>
         </div>
@@ -159,6 +200,30 @@ export default function Home() {
         </div>
       </main>
 
+      {/* ── System Modules Section ── */}
+      <section className="mx-auto max-w-7xl px-6 py-12">
+        <div className="mb-8 inline-flex items-center border-4 border-[#00ff9d] px-4 py-2 text-sm text-[#00ff9d] md:text-base">
+          <span>&gt; SYSTEM_MODULES_</span>
+          <span className="ml-1 inline-block h-5 w-3 animate-pulse bg-[#00ff9d]" />
+        </div>
+
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+          {MODULES.map((mod) => (
+            <div
+              key={mod.title}
+              className="border-4 border-white bg-[#0a0a0a] p-6 shadow-[8px_8px_0px_0px_#00ff9d]"
+            >
+              <h3 className="mb-3 text-xl text-[#00ff9d] md:text-2xl">
+                {mod.title}
+              </h3>
+              <p className="text-base leading-relaxed text-gray-300 md:text-lg">
+                {mod.text}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* ── Live Chart Section ── */}
       <section className="mx-auto max-w-7xl px-6 py-12">
         <h2
@@ -183,9 +248,83 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── Token Data Section ── */}
+      <section className="mx-auto max-w-7xl px-6 py-12">
+        <div className="mb-8 inline-flex items-center border-4 border-[#00ff9d] px-4 py-2 text-sm text-[#00ff9d] md:text-base">
+          <span>&gt; TOKEN_DATA_</span>
+          <span className="ml-1 inline-block h-5 w-3 animate-pulse bg-[#00ff9d]" />
+        </div>
+
+        <div className="border-4 border-white bg-[#0a0a0a] shadow-[8px_8px_0px_0px_#00ff9d]">
+          <div className="border-b-4 border-[#00ff9d] px-4 py-2 text-xs text-[#00ff9d] md:text-sm">
+            &gt; TOKENOMICS_
+          </div>
+          {TOKENOMICS.map((row, i) => (
+            <div
+              key={row.label}
+              className={`flex flex-col justify-between gap-1 px-4 py-4 sm:flex-row sm:items-center sm:gap-4 ${
+                i < TOKENOMICS.length - 1 ? "border-b border-[#222]" : ""
+              }`}
+            >
+              <span className="text-sm text-[#00ff9d] md:text-lg">
+                {row.label}
+              </span>
+              <span className="text-base text-white md:text-xl">
+                {row.value}
+              </span>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* ── Footer ── */}
-      <footer className="animate-pulse py-8 text-center text-xs tracking-wider text-[#00ff9d] md:text-sm">
-        INSERT COIN TO CONTINUE... BUILT IN SWITZERLAND
+      <footer className="py-8 text-center">
+        <p className="animate-pulse text-xs tracking-wider text-[#00ff9d] md:text-sm">
+          INSERT COIN TO CONTINUE... BUILT IN SWITZERLAND
+        </p>
+
+        <div className="mt-4 flex flex-wrap items-center justify-center gap-3 text-sm text-[#00ff9d] md:text-base">
+          <a
+            href={DEXSCREENER_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="transition-colors hover:text-white"
+          >
+            DexScreener
+          </a>
+          <span className="text-gray-600">|</span>
+          <a
+            href={PUMP_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="transition-colors hover:text-white"
+          >
+            Pump.fun
+          </a>
+          <span className="text-gray-600">|</span>
+          <a
+            href="https://x.com/CookSwipe_fun"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="transition-colors hover:text-white"
+          >
+            X
+          </a>
+          <span className="text-gray-600">|</span>
+          <a
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="transition-colors hover:text-white"
+          >
+            Telegram
+          </a>
+        </div>
+
+        <p className="mt-4 text-[10px] text-gray-600 md:text-xs">
+          Disclaimer: $COOK is a memecoin with no intrinsic value. Not financial
+          advice.
+        </p>
       </footer>
     </div>
   );
