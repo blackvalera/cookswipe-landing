@@ -21,19 +21,19 @@ const MODULES = [
   },
   {
     title: "OPENCLAW AI",
-    text: "Never hold the bag again. Set your risk parameters and let OpenClaw AI automatically execute your exits based on momentum.",
+    text: "Full auto-trading enabled. OpenClaw AI doesn\u2019t just handle exits\u2014it autonomously scans, snipes entries, and secures profits based on your custom risk parameters. Set it and forget it.",
   },
   {
-    title: "ZERO FEES",
-    text: "Launch tokens or trade with absolutely 0% platform fees. Built for maximum efficiency.",
+    title: "1% FEE & REFERRALS",
+    text: "1% platform fee on trades. The Alpha: if a user trades via your referral link, the 1% buy fee goes directly to YOU. Otherwise, it goes to the protocol. Share and earn.",
   },
 ];
 
 const TOKENOMICS = [
   { label: "TOTAL SUPPLY", value: "1,000,000,000 $COOK" },
-  { label: "TAXES", value: "0% BUY / 0% SELL" },
-  { label: "LIQUIDITY", value: "BURNED ON PUMP.FUN" },
-  { label: "MINT & FREEZE", value: "REVOKED" },
+  { label: "DEV HOLDINGS", value: "15% (10% PUMP.FUN HACKATHON / 5% AIRDROPS)" },
+  { label: "APP FEES", value: "1% BUY / 1% SELL (BUY FEE GOES TO REFERRERS)" },
+  { label: "TOKEN TAXES", value: "0% (STANDARD PUMP.FUN)" },
 ];
 
 export default function Home() {
@@ -119,7 +119,7 @@ export default function Home() {
 
           {/* Subheadline */}
           <p className="mt-6 max-w-lg text-lg leading-relaxed text-gray-300 md:text-2xl">
-            SWIPE TO TRADE. LET OPENCLAW AI HANDLE EXITS. ZERO FEE LAUNCHES.
+            SWIPE TO TRADE. LET OPENCLAW AI AUTO-TRADE THE TRENCHES. EARN SOL WITH REFERRALS.
           </p>
 
           {/* CTA Buttons */}
