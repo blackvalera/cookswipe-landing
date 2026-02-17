@@ -68,7 +68,7 @@ export default function Home() {
             FOLLOW X
           </a>
           <a
-            href="#"
+            href="https://t.me/Cookswipe_chef"
             target="_blank"
             rel="noopener noreferrer"
             className="border-4 border-white px-4 py-2 text-sm text-white shadow-[4px_4px_0px_0px_#00ff9d] transition-transform active:translate-x-[4px] active:translate-y-[4px] active:shadow-none md:text-base"
@@ -311,7 +311,7 @@ export default function Home() {
           </a>
           <span className="text-gray-600">|</span>
           <a
-            href="#"
+            href="https://t.me/Cookswipe_chef"
             target="_blank"
             rel="noopener noreferrer"
             className="transition-colors hover:text-white"
