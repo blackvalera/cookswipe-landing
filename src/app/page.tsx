@@ -9,7 +9,7 @@ const pixelFont = VT323({
   variable: "--font-pixel",
 });
 
-const CA = "59RuALQmRumQn1kbS8PKB5m5Ek2pCVJakLKPXH7Spump";
+const CA = "TBD";
 const PUMP_URL = `https://pump.fun/coin/${CA}`;
 const DEXSCREENER_EMBED = `https://dexscreener.com/solana/${CA}?embed=1&theme=dark`;
 const DEXSCREENER_URL = `https://dexscreener.com/solana/${CA}`;
@@ -235,14 +235,10 @@ export default function Home() {
           <div className="border-b-4 border-[#ff6600] px-4 py-2 text-xs text-[#ff6600] md:text-sm">
             &gt; DEXSCREENER_FEED_
           </div>
-          <div className="relative w-full" style={{ paddingBottom: "60%" }}>
-            <iframe
-              src={DEXSCREENER_EMBED}
-              title="CookSwipe Live Chart"
-              className="absolute inset-0 h-full w-full"
-              style={{ border: "none" }}
-              allowFullScreen
-            />
+          <div className="flex w-full items-center justify-center py-20">
+            <p className="text-lg text-gray-500 md:text-xl">
+              CHART WILL BE AVAILABLE AFTER TOKEN LAUNCH
+            </p>
           </div>
         </div>
       </section>
@@ -283,23 +279,13 @@ export default function Home() {
         </p>
 
         <div className="mt-4 flex flex-wrap items-center justify-center gap-3 text-sm text-[#ff6600] md:text-base">
-          <a
-            href={DEXSCREENER_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="transition-colors hover:text-white"
-          >
+          <span className="cursor-not-allowed text-gray-600">
             DexScreener
-          </a>
+          </span>
           <span className="text-gray-600">|</span>
-          <a
-            href={PUMP_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="transition-colors hover:text-white"
-          >
+          <span className="cursor-not-allowed text-gray-600">
             Pump.fun
-          </a>
+          </span>
           <span className="text-gray-600">|</span>
           <a
             href="https://x.com/CookSwipe_fun"
