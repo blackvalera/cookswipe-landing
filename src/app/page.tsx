@@ -31,7 +31,7 @@ const MODULES = [
 
 const TOKENOMICS = [
   { label: "TOTAL SUPPLY", value: "1,000,000,000 $COOK" },
-  { label: "DEV HOLDINGS", value: "15% (10% PUMP.FUN HACKATHON / 5% AIRDROPS)" },
+  { label: "DEV HOLDINGS", value: "10% PUMP.FUN HACKATHON" },
   { label: "APP FEES", value: "1% BUY / 1% SELL (BUY FEE GOES TO REFERRERS)" },
   { label: "TOKEN TAXES", value: "0% (STANDARD PUMP.FUN)" },
 ];
