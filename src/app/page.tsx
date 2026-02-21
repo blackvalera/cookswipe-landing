@@ -11,8 +11,6 @@ const pixelFont = VT323({
 
 const CA = "ABQCSFxE5WyLZU5q467ZMBUJwqb48dXpdwRgwCGhpump";
 const PUMP_URL = `https://pump.fun/coin/${CA}`;
-const DEXSCREENER_EMBED = `https://dexscreener.com/solana/${CA}?embed=1&theme=dark`;
-const DEXSCREENER_URL = `https://dexscreener.com/solana/${CA}`;
 
 const MODULES = [
   {
