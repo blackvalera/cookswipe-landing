@@ -11,8 +11,6 @@ const pixelFont = VT323({
 
 const CA = "ABQCSFxE5WyLZU5q467ZMBUJwqb48dXpdwRgwCGhpump";
 const PUMP_URL = `https://pump.fun/coin/${CA}`;
-const DEXSCREENER_EMBED = `https://dexscreener.com/solana/${CA}?embed=1&theme=dark`;
-const DEXSCREENER_URL = `https://dexscreener.com/solana/${CA}`;
 
 const MODULES = [
   {
@@ -223,30 +221,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── Live Chart Section ── */}
-      <section className="mx-auto max-w-7xl px-6 py-12">
-        <h2
-          className="mb-6 text-center text-3xl tracking-wider md:text-4xl"
-          style={{ textShadow: "3px 3px 0px #ff6600" }}
-        >
-          LIVE CHART
-        </h2>
-        <div className="border-4 border-white bg-[#0a0a0a] shadow-[8px_8px_0px_0px_#ff6600]">
-          <div className="border-b-4 border-[#ff6600] px-4 py-2 text-xs text-[#ff6600] md:text-sm">
-            &gt; DEXSCREENER_FEED_
-          </div>
-          <div className="relative w-full" style={{ paddingBottom: "60%" }}>
-            <iframe
-              src={DEXSCREENER_EMBED}
-              title="CookSwipe Live Chart"
-              className="absolute inset-0 h-full w-full"
-              style={{ border: "none" }}
-              allowFullScreen
-            />
-          </div>
-        </div>
-      </section>
-
       {/* ── Token Data Section ── */}
       <section className="mx-auto max-w-7xl px-6 py-12">
         <div className="mb-8 inline-flex items-center border-4 border-[#ff6600] px-4 py-2 text-sm text-[#ff6600] md:text-base">
@@ -283,15 +257,6 @@ export default function Home() {
         </p>
 
         <div className="mt-4 flex flex-wrap items-center justify-center gap-3 text-sm text-[#ff6600] md:text-base">
-          <a
-            href={DEXSCREENER_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="transition-colors hover:text-white"
-          >
-            DexScreener
-          </a>
-          <span className="text-gray-600">|</span>
           <a
             href={PUMP_URL}
             target="_blank"
