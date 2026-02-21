@@ -11,6 +11,8 @@ const pixelFont = VT323({
 
 const CA = "ABQCSFxE5WyLZU5q467ZMBUJwqb48dXpdwRgwCGhpump";
 const PUMP_URL = `https://pump.fun/coin/${CA}`;
+const DEXSCREENER_EMBED = `https://dexscreener.com/solana/${CA}?embed=1&theme=dark`;
+const DEXSCREENER_URL = `https://dexscreener.com/solana/${CA}`;
 
 const MODULES = [
   {
@@ -66,7 +68,7 @@ export default function Home() {
             FOLLOW X
           </a>
           <a
-            href="https://t.me/Cookswipe_chef"
+            href="https://t.me/cookswipe_portal"
             target="_blank"
             rel="noopener noreferrer"
             className="border-4 border-white px-4 py-2 text-sm text-white shadow-[4px_4px_0px_0px_#ff6600] transition-transform active:translate-x-[4px] active:translate-y-[4px] active:shadow-none md:text-base"
@@ -309,7 +311,7 @@ export default function Home() {
           </a>
           <span className="text-gray-600">|</span>
           <a
-            href="https://t.me/Cookswipe_chef"
+            href="https://t.me/cookswipe_portal"
             target="_blank"
             rel="noopener noreferrer"
             className="transition-colors hover:text-white"
