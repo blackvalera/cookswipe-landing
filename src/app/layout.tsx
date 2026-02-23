@@ -13,9 +13,22 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "CookSwipe â€” Tinder for Solana",
+  title: "CookSwipe — Tinder for Solana",
   description:
     "Swipe to trade. Let OpenClaw AI handle your exits with MEV protection. Launch tokens with zero fees.",
+  openGraph: {
+    title: "CookSwipe — Tinder for Solana",
+    description:
+      "Swipe to trade. Let OpenClaw AI handle your exits with MEV protection. Launch tokens with zero fees.",
+    images: ["/banner.png"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "CookSwipe — Tinder for Solana",
+    description:
+      "Swipe to trade. Let OpenClaw AI handle your exits with MEV protection. Launch tokens with zero fees.",
+    images: ["/banner.png"],
+  },
 };
 
 export default function RootLayout({
@@ -33,3 +46,4 @@ export default function RootLayout({
     </html>
   );
 }
+
