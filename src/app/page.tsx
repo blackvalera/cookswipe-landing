@@ -8,8 +8,6 @@ const pixelFont = VT323({
   variable: "--font-pixel",
 });
 
-const PUMP_URL = "https://pump.fun";
-
 const MODULES = [
   {
     title: "SWIPE TO TRADE",
@@ -86,14 +84,6 @@ export default function Home() {
 
           {/* CTA Buttons */}
           <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
-            <a
-              href={PUMP_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block animate-pulse border-4 border-[#ff6600] bg-[#ff6600] px-6 py-4 text-lg font-bold text-black shadow-[8px_8px_0px_0px_#fff] hover:animate-none hover:bg-white active:translate-x-[6px] active:translate-y-[6px] active:shadow-none md:text-xl"
-            >
-              BUY ON PUMP.FUN
-            </a>
             <a
               href="https://zealy.io/cw/cookswipe/questboard"
               target="_blank"
@@ -222,15 +212,6 @@ export default function Home() {
         </p>
 
         <div className="mt-4 flex flex-wrap items-center justify-center gap-3 text-sm text-[#ff6600] md:text-base">
-          <a
-            href={PUMP_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="transition-colors hover:text-white"
-          >
-            Pump.fun
-          </a>
-          <span className="text-gray-600">|</span>
           <a
             href="https://x.com/CookSwipe_fun"
             target="_blank"
