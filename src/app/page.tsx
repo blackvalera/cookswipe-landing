@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import { VT323 } from "next/font/google";
 
 const pixelFont = VT323({
@@ -9,8 +8,7 @@ const pixelFont = VT323({
   variable: "--font-pixel",
 });
 
-const CA = "ABQCSFxE5WyLZU5q467ZMBUJwqb48dXpdwRgwCGhpump";
-const PUMP_URL = `https://pump.fun/coin/${CA}`;
+const PUMP_URL = "https://pump.fun";
 
 const MODULES = [
   {
@@ -21,29 +19,14 @@ const MODULES = [
     title: "OPENCLAW AI",
     text: "Full auto-trading enabled. OpenClaw AI doesn\u2019t just handle exits\u2014it autonomously scans, snipes entries, and secures profits based on your custom risk parameters. Set it and forget it.",
   },
-  {
-    title: "1% FEE & REFERRALS",
-    text: "1% platform fee on trades. The Alpha: if a user trades via your referral link, the 1% buy fee goes directly to YOU. Otherwise, it goes to the protocol. Share and earn.",
-  },
 ];
 
 const TOKENOMICS = [
   { label: "TOTAL SUPPLY", value: "1,000,000,000 $COOK" },
   { label: "DEV HOLDINGS", value: "10% PUMP.FUN HACKATHON" },
-  { label: "APP FEES", value: "1% BUY / 1% SELL (BUY FEE GOES TO REFERRERS)" },
-  { label: "TOKEN TAXES", value: "0% (STANDARD PUMP.FUN)" },
 ];
 
 export default function Home() {
-  const [copied, setCopied] = useState(false);
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const handleCopy = async () => {
-    await navigator.clipboard.writeText(CA);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
-  };
-
   return (
     <div
       className={`${pixelFont.variable} min-h-screen bg-[#050505] text-white`}
@@ -76,28 +59,8 @@ export default function Home() {
         </div>
       </header>
 
-      {/* ── Contract Address Bar ── */}
-      <div className="mx-auto max-w-7xl px-6">
-        <button
-          onClick={handleCopy}
-          className="group flex w-full items-center justify-between border-4 border-[#ff6600] bg-[#0a0a0a] px-4 py-3 text-left transition-transform active:translate-x-[2px] active:translate-y-[2px]"
-        >
-          <div className="min-w-0 flex-1">
-            <span className="block text-xs text-[#ff6600] md:text-sm">
-              &gt; CONTRACT ADDRESS_
-            </span>
-            <span className="block truncate text-sm text-white md:text-lg">
-              {CA}
-            </span>
-          </div>
-          <span className="ml-4 shrink-0 border-4 border-white px-3 py-1 text-xs text-white shadow-[4px_4px_0px_0px_#ff6600] transition-all group-active:translate-x-[4px] group-active:translate-y-[4px] group-active:shadow-none md:text-sm">
-            {copied ? "COPIED!" : "COPY"}
-          </span>
-        </button>
-      </div>
-
       {/* ── Hero ── */}
-      <main className="mx-auto flex min-h-[calc(100vh-220px)] max-w-7xl flex-col items-center justify-center gap-12 px-6 lg:flex-row lg:gap-16">
+      <main className="mx-auto flex min-h-[calc(100vh-140px)] max-w-7xl flex-col items-center justify-center gap-12 px-6 lg:flex-row lg:gap-16">
         {/* Left column — Copy & CTA */}
         <div className="flex flex-col items-center text-center lg:w-1/2 lg:items-start lg:text-left">
           {/* Badge */}
@@ -118,7 +81,7 @@ export default function Home() {
 
           {/* Subheadline */}
           <p className="mt-6 max-w-lg text-lg leading-relaxed text-gray-300 md:text-2xl">
-            SWIPE TO TRADE. LET OPENCLAW AI AUTO-TRADE THE TRENCHES. EARN SOL WITH REFERRALS.
+            SWIPE TO TRADE. LET OPENCLAW AI AUTO-TRADE THE TRENCHES.
           </p>
 
           {/* CTA Buttons */}
@@ -139,12 +102,14 @@ export default function Home() {
             >
               JOIN THE AIRDROP
             </a>
-            <button
-              onClick={() => setIsModalOpen(true)}
+            <a
+              href="https://x.com/CookSwipe_fun"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-block border-4 border-white bg-transparent px-6 py-4 text-lg font-bold text-white shadow-[8px_8px_0px_0px_#ff6600] active:translate-x-[6px] active:translate-y-[6px] active:shadow-none md:text-xl"
             >
-              READ MANIFESTO
-            </button>
+              LEARN MORE
+            </a>
           </div>
         </div>
 
@@ -291,64 +256,6 @@ export default function Home() {
         </p>
       </footer>
 
-      {/* ── Manifesto Modal ── */}
-      {isModalOpen && (
-        <div
-          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 backdrop-blur-sm p-4"
-          onClick={() => setIsModalOpen(false)}
-        >
-          <div
-            className="w-full max-w-2xl max-h-[85vh] overflow-y-auto border-4 border-[#ff6600] bg-[#050505] shadow-[8px_8px_0px_0px_#ff6600]"
-            onClick={(e) => e.stopPropagation()}
-          >
-            {/* Title bar */}
-            <div className="flex items-center justify-between border-b-4 border-[#ff6600] px-6 py-3">
-              <span className="text-sm text-[#ff6600] md:text-base">
-                &gt;_ SYSTEM_LOG: FOUNDERS_MANIFESTO.txt
-              </span>
-              <button
-                onClick={() => setIsModalOpen(false)}
-                className="text-sm text-[#ff6600] transition-colors hover:text-white md:text-base"
-              >
-                [ X ]
-              </button>
-            </div>
-
-            {/* Body */}
-            <div className="space-y-4 px-6 py-6 text-base leading-relaxed text-gray-300 md:text-lg">
-              <p>
-                Most Web3 trading tools are built by faceless corporations or
-                anonymous devs looking for a quick flip. We are different.
-              </p>
-              <p>
-                We are a husband and wife dev duo hacking away from our home
-                office in Switzerland. We got tired of getting rekt by clunky DEX
-                UIs, missing perfect entries, and holding the bag while MEV bots
-                and whales dumped on us.
-              </p>
-              <p>
-                So we decided to build the tools we actually wanted to use, to
-                level the playing field for the trenches.
-              </p>
-              <p>
-                CookSwipe combines the addictive, frictionless swipe mechanics of
-                dating apps with a ruthless, automated AI trading terminal. You
-                swipe. OpenClaw AI does the heavy lifting — autonomously sniping
-                entries and securing profits based on your parameters while you
-                sleep.
-              </p>
-              <p>
-                No massive VC funding. Just pure code, coffee, and a mission to
-                build the best auto-trading bot for the Pump.fun Hackathon and
-                beyond.
-              </p>
-              <p className="text-[#ff6600]">
-                Welcome to the family. Let&apos;s cook.
-              </p>
-            </div>
-          </div>
-        </div>
-      )}
     </div>
   );
 }
